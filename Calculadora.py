@@ -2,9 +2,23 @@ import tkinter as tk
 from tkinter import simpledialog, messagebox
 
 # ---------------- FUNCIONES ----------------
+def division():
+    a = simpledialog.askfloat("División", "Ingrese el numerador:")
+    b = simpledialog.askfloat("División", "Ingrese el denominador:")
+    if b == 0:
+        messagebox.showerror("Error", "No se puede dividir entre cero")
+    else:
+        messagebox.showinfo("Resultado", f"Resultado: {a / b}")
 
-
-
+def factorial():
+    n = simpledialog.askinteger("Factorial", "Ingrese un número:")
+    if n is None or n < 0:
+        messagebox.showerror("Error", "Número inválido")
+        return
+    fact = 1
+    for i in range(1, n + 1):
+        fact *= i
+    messagebox.showinfo("Resultado", f"{n}! = {fact}")
 # ---------------- INTERFAZ ----------------
 
 ventana = tk.Tk()
