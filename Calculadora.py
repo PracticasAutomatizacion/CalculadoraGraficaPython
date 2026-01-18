@@ -19,6 +19,25 @@ def factorial():
     for i in range(1, n + 1):
         fact *= i
     messagebox.showinfo("Resultado", f"{n}! = {fact}")
+# ---------------- Suma y producto -----------
+def suma_numeros():
+    n = simpledialog.askinteger("Suma", "¿Cuántos números desea sumar?")
+    if not n or n <= 0:
+        return
+    total = 0
+    for i in range(n):
+        total += simpledialog.askfloat("Suma", f"Ingrese el número {i+1}:")
+    messagebox.showinfo("Resultado", f"La suma es: {total}")
+
+def producto_numeros():
+    n = simpledialog.askinteger("Producto", "¿Cuántos números desea multiplicar?")
+    if not n or n <= 0:
+        return
+    producto = 1
+    for i in range(n):
+        producto *= simpledialog.askfloat("Producto", f"Ingrese el número {i+1}:")
+    messagebox.showinfo("Resultado", f"El producto es: {producto}")
+
 # ---------------- INTERFAZ ----------------
 
 ventana = tk.Tk()
