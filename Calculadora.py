@@ -33,6 +33,22 @@ def tabla():
 def potencias():
     n = simpledialog.askfloat("Potencias", "Ingrese un número:")
     messagebox.showinfo("Resultado", f"Cuadrado: {n*2}\nCubo: {n*3}")
+
+# ---------------- Máximo y Mínimo -----------
+def max_min():
+    n = simpledialog.askinteger("Máx y Mín", "¿Cuántos números ingresará?")
+    if not n or n <= 0:
+        return
+    num = simpledialog.askinteger("Máx y Mín", "Ingrese el número 1:")
+    maximo = minimo = num
+    for i in range(1, n):
+        num = simpledialog.askinteger("Máx y Mín", f"Ingrese el número {i+1}:")
+        maximo = max(maximo, num)
+        minimo = min(minimo, num)
+    messagebox.showinfo(
+        "Resultado",
+        f"Máximo: {maximo}\nMínimo: {minimo}\nCantidad: {n}"
+    )    
                             
 # ---------------- Suma y producto -----------
 def suma_numeros():
