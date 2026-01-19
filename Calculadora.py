@@ -32,7 +32,7 @@ def tabla():
 
 def potencias():
     n = simpledialog.askfloat("Potencias", "Ingrese un número:")
-    messagebox.showinfo("Resultado", f"Cuadrado: {n*2}\nCubo: {n*3}"
+    messagebox.showinfo("Resultado", f"Cuadrado: {n*2}\nCubo: {n*3}")
                             
 # ---------------- Suma y producto -----------
 def suma_numeros():
