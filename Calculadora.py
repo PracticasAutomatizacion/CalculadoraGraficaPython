@@ -19,6 +19,21 @@ def factorial():
     for i in range(1, n + 1):
         fact *= i
     messagebox.showinfo("Resultado", f"{n}! = {fact}")
+
+def tabla():
+    n = simpledialog.askinteger("Tabla", "Ingrese un número (1-10):")
+    if n is None or not 1 <= n <= 10:
+        messagebox.showerror("Error", "Número fuera de rango")
+        return
+    texto = ""
+    for i in range(1, 11):
+        texto += f"{n} x {i} = {n*i}\n"
+    messagebox.showinfo("Tabla", texto)
+
+def potencias():
+    n = simpledialog.askfloat("Potencias", "Ingrese un número:")
+    messagebox.showinfo("Resultado", f"Cuadrado: {n*2}\nCubo: {n*3}"
+                            
 # ---------------- Suma y producto -----------
 def suma_numeros():
     n = simpledialog.askinteger("Suma", "¿Cuántos números desea sumar?")
