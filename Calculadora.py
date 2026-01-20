@@ -69,6 +69,22 @@ def producto_numeros():
         producto *= simpledialog.askfloat("Producto", f"Ingrese el número {i+1}:")
     messagebox.showinfo("Resultado", f"El producto es: {producto}")
 
+
+# --------------- promedio ----------------- Rodolfo Cruz Fernandez.
+def promedio():
+    suma = 0
+    cont = 0
+    while True:
+        n = simpledialog.askfloat("Promedio", "Ingrese un número (-1 para terminar):")
+        if n == -1:
+            break
+        suma += n
+        cont += 1
+    if cont == 0:
+        messagebox.showinfo("Resultado", "No se ingresaron números")
+    else:
+        messagebox.showinfo("Resultado", f"Promedio: {suma / cont}")
+
 # ---------------- INTERFAZ ----------------
 
 ventana = tk.Tk()
